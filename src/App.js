@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header';
+import Project from './pages/Project';
+import Profile from './pages/Profile';
+import { useEffect, useState } from 'react';
+import ProjectData from './project.json';
 
 function App() {
+  const [project, setProject] = useState([]);
+
+  useEffect(() => {
+    setProject(ProjectData);
+  }, [])
+  console.log(ProjectData);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path='/Project' element={<Project project={project}/>} />
+        <Route path='/Profile' element={<Profile/>} />
+      </Routes>
     </div>
   );
 }
