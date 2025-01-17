@@ -1,0 +1,56 @@
+[
+  {
+    "title": "드라마 내일 Re-Design Web",
+    "description": "드라마 내일의 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다. ",
+    "image": "/assets/drama.webp",
+    "pageImage": "/assets/drama_web.png",
+    "githubUrl": "https://github.com/LeeYongSeok13/drama",
+    "pageUrl": "https://leeyongseok13.github.io/drama/",
+    "useSkills": [
+      { "name": "HTML", "percentage": 54.4 },
+      { "name": "CSS", "percentage": 42.6 },
+      { "name": "Javascript", "percentage": 3.0 }
+    ],
+    "contributions": [{ "design": 100 }, { "coding": 100 }]
+  },
+  {
+    "title": "뉴발란스 Re-Design Web",
+    "description": "뉴발란스 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다.",
+    "image": "/assets/newbalance_logo.png",
+    "pageImage": "/assets/newbalance_web.png",
+    "githubUrl": "https://github.com/LeeYongSeok13/newbalance",
+    "pageUrl": "https://leeyongseok13.github.io/newbalance/",
+    "useSkills": [
+      { "name": "HTML", "percentage": 58.9 },
+      { "name": "CSS", "percentage": 37.2 },
+      { "name": "Javascript", "percentage": 3.9 }
+    ],
+    "contributions": [{ "design": 100 }, { "coding": 100 }]
+  },
+  {
+    "title": "제주맥주 Re-Design Web",
+    "description": "매일유업 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다.",
+    "image": "/assets/beer_logo.png",
+    "pageImage": "/assets/beer_web.png",
+    "githubUrl": "https://github.com/LeeYongSeok13/beer",
+    "pageUrl": "https://leeyongseok13.github.io/beer/",
+    "useSkills": [
+      { "name": "HTML", "percentage": 50.3 },
+      { "name": "CSS", "percentage": 45.0 },
+      { "name": "Javascript", "percentage": 4.7 }
+    ],
+    "contributions": [{ "design": 100 }, { "coding": 100 }]
+  },
+  {
+    "title": "Portfolio Web Site3",
+    "description": "A responsive portfolio website built with React"
+  },
+  {
+    "title": "Portfolio Web Site4",
+    "description": "A responsive portfolio website built with React"
+  },
+  {
+    "title": "Portfolio Web Site5",
+    "description": "A responsive portfolio website built with React"
+  }
+]

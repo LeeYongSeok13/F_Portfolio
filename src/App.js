@@ -1,27 +1,19 @@
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import Header from './components/Header';
-import Project from './pages/Project';
-import Profile from './pages/Profile';
-import { useEffect, useState } from 'react';
-import ProjectData from './project.json';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage.jsx";
+import Project from "./pages/Project.jsx";
+import Profile from "./pages/Profile.jsx";
 
-function App() {
-  const [project, setProject] = useState([]);
-
-  useEffect(() => {
-    setProject(ProjectData);
-  }, [])
-  console.log(ProjectData);
+const App = () => {
   return (
-    <div className="App">
-      <Header />
+    <Router>
       <Routes>
-        <Route path='/Project' element={<Project project={project}/>} />
-        <Route path='/Profile' element={<Profile/>} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
-    </div>
+    </Router>
   );
-}
+};
 
 export default App;

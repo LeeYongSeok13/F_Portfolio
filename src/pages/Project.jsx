@@ -1,11 +1,12 @@
-import React from 'react'
-import ProjectList from '../components/ProjectList'
+import React from "react";
+import Header from "../components/Header";
+import ProjectInfo from "../components/ProjectInfo";
 
-export default function Project({project}) {
+export default function Project() {
   return (
-    <div>
-      <h1>Project Page</h1>
-      <ProjectList project={project}/>
+    <div className="Project">
+      <Header />
+      <ProjectInfo />
     </div>
-  )
+  );
 }
