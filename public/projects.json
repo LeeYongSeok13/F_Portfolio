@@ -1,5 +1,7 @@
 [
   {
+    "id": 1,
+    "type": "personal",
     "title": "드라마 내일 Re-Design Web",
     "description": "드라마 내일의 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다. ",
     "image": "/assets/drama.webp",
@@ -14,6 +16,8 @@
     "contributions": [{ "design": 100 }, { "coding": 100 }]
   },
   {
+    "id": 2,
+    "type": "personal",
     "title": "뉴발란스 Re-Design Web",
     "description": "뉴발란스 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다.",
     "image": "/assets/newbalance_logo.png",
@@ -28,6 +32,8 @@
     "contributions": [{ "design": 100 }, { "coding": 100 }]
   },
   {
+    "id": 3,
+    "type": "personal",
     "title": "제주맥주 Re-Design Web",
     "description": "매일유업 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다.",
     "image": "/assets/beer_logo.png",
@@ -42,12 +48,36 @@
     "contributions": [{ "design": 100 }, { "coding": 100 }]
   },
   {
-    "title": "Portfolio Web Site3",
-    "description": "A responsive portfolio website built with React"
+    "id": 4,
+    "type": "personal",
+    "title": "한샘 Re-Design Web",
+    "description": "한샘 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다.",
+    "image": "/assets/hanssem_logo.webp",
+    "pageImage": "/assets/hanssem_web.png",
+    "githubUrl": "https://github.com/LeeYongSeok13/hanssem",
+    "pageUrl": "https://leeyongseok13.github.io/hanssem/",
+    "useSkills": [
+      { "name": "HTML", "percentage": 51.5 },
+      { "name": "CSS", "percentage": 41.4 },
+      { "name": "Javascript", "percentage": 7.1 }
+    ],
+    "contributions": [{ "design": 100 }, { "coding": 100 }]
   },
   {
-    "title": "Portfolio Web Site4",
-    "description": "A responsive portfolio website built with React"
+    "id": 5,
+    "type": "team",
+    "title": "Newera Re-Design React",
+    "description": "Newera 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다. 리액트를 활용하여 컴포넌트 나누는 법을 습득하였습니다.",
+    "image": "/assets/newera_logo.jpg",
+    "pageImage": "/assets/newera_react.png",
+    "githubUrl": "https://github.com/LeeYongSeok13/Newera",
+    "pageUrl": "https://leeyongseok13.github.io/Newera",
+    "useSkills": [
+      { "name": "HTML", "percentage": 3.6 },
+      { "name": "CSS", "percentage": 22.0 },
+      { "name": "Javascript", "percentage": 74.4 }
+    ],
+    "contributions": [{ "design": 100 }, { "coding": 100 }]
   },
   {
     "title": "Portfolio Web Site5",
