@@ -13,9 +13,18 @@ const ModalWrapper = styled.div`
   align-items: center;
   z-index: 1000;
 
+  .image-container {
+    width: 400px;
+    height: 400px;
+    overflow: auto;
+    margin: 0 auto 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+  }
+
   img {
-    width: 200px;
-    height: 300px;
+    width: 200%;
+    height: 400%;
   }
 
   .modal-content {
@@ -78,7 +87,9 @@ export default function ProjectModal({ project, onClose }) {
           &times;
         </button>
         <h2>{project.title}</h2>
-        <img src={project.pageImage} alt={project.title} />
+        <div className="image-container">
+          <img src={project.pageImage} alt={project.title} />
+        </div>
         <p>{project.description}</p>
         {project.useSkills && (
           <SkillsWrapper>
