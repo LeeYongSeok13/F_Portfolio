@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
+// fadeIn 애니메이션
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -11,6 +12,7 @@ const fadeIn = keyframes`
   }
 `;
 
+// 배경 이미지와 중앙 정렬을 위한 InfoContainer 스타일
 const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,14 +21,32 @@ const InfoContainer = styled.div`
   background-size: cover;
   height: 100vh;
   justify-content: center;
-  height: 100vh;
   padding: 20px;
+  text-align: center;
+  position: relative;
+  color: white;
 `;
 
-const Info = styled.h2`
-  text-align: center;
-  color: white;
+// 정보 텍스트 애니메이션을 위한 Info 스타일
+const Info = styled.div`
   animation: ${fadeIn} 2s ease;
+  opacity: 0;
+  animation-fill-mode: forwards;
+`;
+
+// 타이틀 스타일
+const Title = styled.h2`
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* 텍스트에 그림자 효과 추가 */
+`;
+
+// 설명 텍스트 스타일
+const Description = styled.h3`
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-bottom: 30px;
 `;
 
 export default function MainPageInfo() {
@@ -38,8 +58,8 @@ export default function MainPageInfo() {
   return (
     <InfoContainer>
       <Info>
-        <h2>{info.title}</h2>
-        <h2>{info.description}</h2>
+        <Title>{info.title}</Title>
+        <Description>{info.description}</Description>
       </Info>
     </InfoContainer>
   );
