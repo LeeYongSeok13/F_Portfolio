@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const ModalWrapper = styled.div`
@@ -26,6 +26,13 @@ const ModalContent = styled.div`
   overflow: hidden;
 `;
 
+const Title = styled.h2`
+  font-family: "Caveat Brush", cursive;
+  font-size: 2.5rem;
+  color: ${({ type }) =>
+    type === "personal" ? "#3b5998" : "#2c6b2f"}; /* 색상 적용 */
+`;
+
 const ImageContainer = styled.div`
   width: 100%;
   height: 250px;
@@ -34,11 +41,31 @@ const ImageContainer = styled.div`
   border-radius: 10px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
+  position: relative;
 
   img {
     max-width: 100%;
     max-height: auto;
     object-fit: unset;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${({ type }) => (type === "personal" ? "#3b5998" : "#2c6b2f")};
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: ${({ type }) => (type === "personal" ? "#2a4887" : "#1e4d22")};
   }
 `;
 
@@ -49,6 +76,25 @@ const ContentWrapper = styled.div`
 
   p {
     font-size: 0.8rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${({ type }) => (type === "personal" ? "#3b5998" : "#2c6b2f")};
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: ${({ type }) => (type === "personal" ? "#2a4887" : "#1e4d22")};
   }
 `;
 
@@ -79,6 +125,9 @@ const ProgressBar = styled.div`
   }
 `;
 
+const Contributions = styled.span`
+  font-size: 0.8rem;
+`;
 const CloseButton = styled.div`
   position: absolute;
   top: 10px;
@@ -89,8 +138,37 @@ const CloseButton = styled.div`
   border: none;
 `;
 
-export default function ProjectModal({ project, onClose }) {
+const DotContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+`;
+
+const Dot = styled.div`
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: ${({ active, type }) =>
+    active ? (type === "personal" ? "#3b5998" : "#2c6b2f") : "#ccc"};
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: ${({ type }) =>
+      type === "personal" ? "#3b5998" : "#2c6b2f"};
+  }
+`;
+
+export default function ProjectModal({ project, onClose, type }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   if (!project) return null;
+
+  const images = Array.isArray(project.pageImage)
+    ? project.pageImage
+    : [project.pageImage];
 
   const handleBackgroundClick = (e) => {
     if (e.target.classList.contains("modal-wrapper")) {
@@ -116,15 +194,31 @@ export default function ProjectModal({ project, onClose }) {
         return "#6c757d";
     }
   };
+
   return (
     <ModalWrapper className="modal-wrapper" onClick={handleBackgroundClick}>
       <ModalContent>
         <CloseButton onClick={onClose}>&times;</CloseButton>
-        <h2>{project.title}</h2>
-        <ImageContainer>
-          <img src={project.pageImage} alt={project.title} />
+        <Title type={type}>{project.title}</Title> {/* ⬅ 변경된 h2 */}
+        <ImageContainer type={type}>
+          <img
+            src={images[currentImageIndex]}
+            alt={`${project.title} - ${currentImageIndex + 1}`}
+          />
         </ImageContainer>
-        <ContentWrapper>
+        {images.length > 1 && (
+          <DotContainer>
+            {images.map((_, index) => (
+              <Dot
+                key={index}
+                active={index === currentImageIndex}
+                onClick={() => setCurrentImageIndex(index)}
+                type={type}
+              />
+            ))}
+          </DotContainer>
+        )}
+        <ContentWrapper type={type}>
           <p>{project.description}</p>
           {Array.isArray(project.useSkills) && project.useSkills.length > 0 && (
             <SkillsWrapper>
@@ -144,6 +238,7 @@ export default function ProjectModal({ project, onClose }) {
                   </ProgressBar>
                 </div>
               ))}
+              <Contributions>{project.contributions}</Contributions>
             </SkillsWrapper>
           )}
         </ContentWrapper>

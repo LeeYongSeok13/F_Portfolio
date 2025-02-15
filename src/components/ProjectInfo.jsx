@@ -11,15 +11,6 @@ const ProjectInfoWrapper = styled.div`
   overflow: hidden;
   scroll-behavior: smooth;
   position: relative;
-
-  h2 {
-    font-family: "Caveat Brush", cursive;
-    font-size: 2.5rem;
-    color: ${({ type }) =>
-      type === "personal"
-        ? "#3b5998"
-        : "#2c6b2f"}; /* h2 색상, type에 따라 다르게 */
-  }
 `;
 
 const Section = styled(motion.div)`
@@ -32,16 +23,15 @@ const Section = styled(motion.div)`
   background: ${({ type }) =>
     type === "personal"
       ? "linear-gradient(to right, #e3f2fd, #bbdefb)" // 파란색 계열
-      : "linear-gradient(to right, #a5d6a7, #81c784)"}; // 파란색에서 녹색으로 부드럽게 전환
+      : "linear-gradient(to right, #a5d6a7, #81c784)"}; // 녹색 계열
   transition: background 0.5s ease-in-out;
   position: relative;
+`;
 
-  h2 {
-    color: ${({ type }) =>
-      type === "personal"
-        ? "#3b5998"
-        : "#2c6b2f"}; /* h2 색상도 type에 따라 다르게 */
-  }
+const Title = styled.h2`
+  font-family: "Caveat Brush", cursive;
+  font-size: 2.5rem;
+  color: ${({ type }) => (type === "personal" ? "#3b5998" : "#2c6b2f")};
 `;
 
 const ArrowContainer = styled.div`
@@ -64,7 +54,7 @@ const ArrowButton = styled.button`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    color: #3b5998;
+    color: ${({ type }) => (type === "personal" ? "#3b5998" : "#2c6b2f")};
     transform: scale(1.2);
   }
 `;
@@ -98,26 +88,26 @@ export default function ProjectInfo() {
     <ProjectInfoWrapper>
       <motion.div>
         <Section ref={(el) => (sections.current[0] = el)} type="personal">
-          <h2>Personal Projects</h2>
+          <Title type="personal">Personal Projects</Title>{" "}
           <Slider
             projects={filterProjects("personal")}
             onProjectClick={setSelectedProject}
           />
           <ArrowContainer>
-            <ArrowButton onClick={() => scrollToSection(1)}>
+            <ArrowButton type="personal" onClick={() => scrollToSection(1)}>
               <FaChevronDown />
             </ArrowButton>
           </ArrowContainer>
         </Section>
 
         <Section ref={(el) => (sections.current[1] = el)} type="team">
-          <h2>Team Projects</h2>
+          <Title type="team">Team Projects</Title>
           <Slider
             projects={filterProjects("team")}
             onProjectClick={setSelectedProject}
           />
           <ArrowContainer>
-            <ArrowButton onClick={() => scrollToSection(0)}>
+            <ArrowButton type="team" onClick={() => scrollToSection(0)}>
               <FaChevronUp />
             </ArrowButton>
           </ArrowContainer>
@@ -125,7 +115,11 @@ export default function ProjectInfo() {
       </motion.div>
 
       {selectedProject && (
-        <ProjectModal project={selectedProject} onClose={handleModalClose} />
+        <ProjectModal
+          project={selectedProject}
+          onClose={handleModalClose}
+          type={selectedProject.type}
+        />
       )}
     </ProjectInfoWrapper>
   );

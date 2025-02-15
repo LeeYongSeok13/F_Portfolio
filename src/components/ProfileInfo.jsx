@@ -20,12 +20,9 @@ const Title = styled.div`
   text-align: center;
   padding: 50px 0;
 
-  h4 {
-    font-size: 1.2rem;
-  }
-
   h2 {
-    font-size: 2rem;
+    font-family: "Caveat Brush", cursive;
+    font-size: 2.5rem;
     margin-bottom: 20px;
   }
 `;

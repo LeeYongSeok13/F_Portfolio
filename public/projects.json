@@ -13,7 +13,7 @@
       { "name": "CSS", "percentage": 42.6 },
       { "name": "Javascript", "percentage": 3.0 }
     ],
-    "contributions": [{ "design": 100 }, { "coding": 100 }]
+    "contributions": "#디자인 100% #코딩 100% #Re-Design"
   },
   {
     "id": 2,
@@ -29,7 +29,7 @@
       { "name": "CSS", "percentage": 37.2 },
       { "name": "Javascript", "percentage": 3.9 }
     ],
-    "contributions": [{ "design": 100 }, { "coding": 100 }]
+    "contributions": "#디자인 100% #코딩 100% #Re-Design"
   },
   {
     "id": 3,
@@ -45,10 +45,7 @@
       { "name": "CSS", "percentage": 45.0 },
       { "name": "Javascript", "percentage": 4.7 }
     ],
-    "contributions": [
-      { "design": "홈페이지 리뉴얼" },
-      { "coding": "100% 손코딩" }
-    ]
+    "contributions": "#디자인 100% #코딩 100% #Re-Design"
   },
   {
     "id": 4,
@@ -64,7 +61,7 @@
       { "name": "CSS", "percentage": 41.4 },
       { "name": "Javascript", "percentage": 7.1 }
     ],
-    "contributions": [{ "design": 100 }, { "coding": 100 }]
+    "contributions": "#디자인 100% #코딩 100% #Re-Design #반응형"
   },
   {
     "id": 5,
@@ -80,15 +77,20 @@
       { "name": "CSS", "percentage": 22.0 },
       { "name": "Javascript", "percentage": 74.4 }
     ],
-    "contributions": [{ "design": 100 }, { "coding": 100 }]
+    "contributions": "#디자인 100% #코딩 100% #Re-Design #React #컴포넌트 분리"
   },
   {
     "id": 6,
     "type": "team",
     "title": "Costco Re-Design ",
-    "description": "Costco 홈페이지를 팀 프로젝트로 VanilaJS를 사용하여 만든 웹페이지 입니다.",
+    "description": "Costco 홈페이지를 VanilaJs를 사용하여 여러 기능을 넣은 웹페이지",
     "image": "/assets/costco_logo.png",
-    "pageImage": "",
+    "pageImage": [
+      "/assets/costco_page_main.png",
+      "/assets/costco_page_particularpage.png",
+      "/assets/costco_page_shoppinglist.png",
+      "/assets/costco_page_event.png"
+    ],
     "githubUrl": "https://github.com/LeeYongSeok13/CostLab_team_project",
     "pageUrl": "https://costlab.netlify.app/",
     "useSkills": [
@@ -96,7 +98,7 @@
       { "name": "CSS", "percentage": 35.2 },
       { "name": "Javascript", "percentage": 30.4 }
     ],
-    "contributions": [{ "design": 33.3 }, { "coding": 33.3 }]
+    "contributions": "#메인페이지 디자인 #로컬 스토리지 활용 #상품 페이지 디자인 및 코딩"
   },
   {
     "id": 7,
@@ -118,9 +120,9 @@
     "type": "team",
     "title": "League of Legend Custom Team Matching",
     "description": "서버와 클라이언트 방식을 사용한 React 프로젝트 입니다.",
-    "image": "",
-    "pageImage": "",
-    "githubUrl": "https://github.com/LeeYongSeok13/LoL-custum-matching",
+    "image": "/assets/noobs_logo.png",
+    "pageImage": ["/assets/noobs_app_login.png", "/assets/noobs_app_main.png"],
+    "githubUrl": "https://github.com/LeeYongSeok13/matchSystem",
     "pageUrl": "https://www.noobsapp.store/",
     "useSkills": [
       { "name": "Typescript", "percentage": 64.5 },
