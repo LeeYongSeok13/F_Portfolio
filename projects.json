@@ -165,7 +165,7 @@
     "image": "/assets/noobs_logo.png",
     "pageImage": ["/assets/noobs_app_login.png", "/assets/noobs_app_main.png"],
     "githubUrl": "https://github.com/LeeYongSeok13/matchSystem",
-    "pageUrl": "https://www.noobsapip.store/",
+    "pageUrl": "https://www.noobsapp.store/",
     "useSkills": [
       { "name": "Typescript", "percentage": 64.5 },
       { "name": "Javascript", "percentage": 33.5 },
