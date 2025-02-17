@@ -49,7 +49,7 @@ const ArrowButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 4rem;
   color: rgba(0, 0, 0, 0.7);
   transition: all 0.3s ease-in-out;
 

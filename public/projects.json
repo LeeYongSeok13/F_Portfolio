@@ -3,7 +3,7 @@
     "id": 1,
     "type": "personal",
     "title": "드라마 내일 Re-Design Web",
-    "description": "드라마 내일의 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다. ",
+    "description": "드라마 내일의 홈페이지를 참조한 개인 프로젝트",
     "image": "/assets/drama.webp",
     "pageImage": "/assets/drama_web.png",
     "githubUrl": "https://github.com/LeeYongSeok13/drama",
@@ -13,13 +13,17 @@
       { "name": "CSS", "percentage": 42.6 },
       { "name": "Javascript", "percentage": 3.0 }
     ],
-    "contributions": "#디자인 100% #코딩 100% #Re-Design"
+    "contributions": [
+      "#디자인 변경 & 클론코딩",
+      "#기본적인 웹페이지 구현방식 습득",
+      "#단일 웹페이지"
+    ]
   },
   {
     "id": 2,
     "type": "personal",
     "title": "뉴발란스 Re-Design Web",
-    "description": "뉴발란스 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다.",
+    "description": "뉴발란스 홈페이지를 참조한 개인 프로젝트",
     "image": "/assets/newbalance_logo.png",
     "pageImage": "/assets/newbalance_web.png",
     "githubUrl": "https://github.com/LeeYongSeok13/newbalance",
@@ -29,13 +33,18 @@
       { "name": "CSS", "percentage": 37.2 },
       { "name": "Javascript", "percentage": 3.9 }
     ],
-    "contributions": "#디자인 100% #코딩 100% #Re-Design"
+    "contributions": [
+      "#디자인 변경 & 클론코딩",
+      "#Slick Slider 활용",
+      "#다양한한 CSS & JS기능 활용",
+      "#단일 웹페이지"
+    ]
   },
   {
     "id": 3,
     "type": "personal",
     "title": "제주맥주 Re-Design Web",
-    "description": "매일유업 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다.",
+    "description": "매일유업 홈페이지를 참조한 개인 프로젝트",
     "image": "/assets/beer_logo.png",
     "pageImage": "/assets/beer_web.png",
     "githubUrl": "https://github.com/LeeYongSeok13/beer",
@@ -45,13 +54,18 @@
       { "name": "CSS", "percentage": 45.0 },
       { "name": "Javascript", "percentage": 4.7 }
     ],
-    "contributions": "#디자인 100% #코딩 100% #Re-Design"
+    "contributions": [
+      "#디자인 변경 & 클론코딩",
+      "#다양한 CSS & JS 기능 활용",
+      "#Header 변화",
+      "#단일 웹페이지"
+    ]
   },
   {
     "id": 4,
     "type": "personal",
     "title": "한샘 Re-Design Web",
-    "description": "한샘 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다.",
+    "description": "한샘 홈페이지를 참조한 개인 프로젝트",
     "image": "/assets/hanssem_logo.webp",
     "pageImage": "/assets/hanssem_web.png",
     "githubUrl": "https://github.com/LeeYongSeok13/hanssem",
@@ -61,13 +75,18 @@
       { "name": "CSS", "percentage": 41.4 },
       { "name": "Javascript", "percentage": 7.1 }
     ],
-    "contributions": "#디자인 100% #코딩 100% #Re-Design #반응형"
+    "contributions": [
+      "#디자인 변경 & 클론코딩",
+      "#다양한 CSS & JS 기능 활용",
+      "#반응형 웹페이지",
+      "#단일 웹페이지"
+    ]
   },
   {
     "id": 5,
     "type": "personal",
     "title": "Newera Re-Design React",
-    "description": "Newera 홈페이지를 나만의 스타일로 재해석한 단일 페이지입니다. 리액트를 활용하여 컴포넌트 나누는 법을 습득하였습니다.",
+    "description": "Newera 홈페이지를 참조한 개인 프로젝트(React 컴포넌트 활용)",
     "image": "/assets/newera_logo.png",
     "pageImage": "/assets/newera_react.png",
     "githubUrl": "https://github.com/LeeYongSeok13/Newera",
@@ -77,13 +96,18 @@
       { "name": "CSS", "percentage": 22.0 },
       { "name": "Javascript", "percentage": 74.4 }
     ],
-    "contributions": "#디자인 100% #코딩 100% #Re-Design #React #컴포넌트 분리"
+    "contributions": [
+      "#React를 활용한 컴포넌트 단위 프로젝트",
+      "#디자인 변화가 크게 없는 클론코딩",
+      "#팝업 창 도입",
+      "#단일 웹페이지"
+    ]
   },
   {
     "id": 6,
     "type": "team",
     "title": "Costco Re-Design ",
-    "description": "Costco 홈페이지를 VanilaJs를 사용하여 여러 기능을 넣은 웹페이지",
+    "description": "VanilaJs와 로컬 스토리지를 사용한 쇼핑 웹사이트",
     "image": "/assets/costco_logo.png",
     "pageImage": [
       "/assets/costco_page_main.png",
@@ -98,28 +122,46 @@
       { "name": "CSS", "percentage": 35.2 },
       { "name": "Javascript", "percentage": 30.4 }
     ],
-    "contributions": "#메인페이지 디자인 #로컬 스토리지 활용 #상품 페이지 디자인 및 코딩"
+    "contributions": [
+      "#프로젝트 팀원",
+      "#메인페이지 디자인",
+      "#로컬 스토리지 활용",
+      "#상품 페이지 디자인 및 구현"
+    ]
   },
   {
     "id": 7,
     "type": "team",
     "title": "Pomodoro 타이머 웹페이지 개발",
-    "description": "서버와 클라이언트 방식을 사용하여 여러가지 기능을 만든 웹 페이지 입니다.",
+    "description": "서버와 클라이언트 방식을 사용한 웹 프로젝트",
     "image": "/assets/pomodoro_logo.png",
-    "pageImage": "",
+    "pageImage": [
+      "/assets/pomodoro_page_login.png",
+      "/assets/pomodoro_page_register.png",
+      "/assets/pomodoro_page_main.png",
+      "/assets/pomodoro_page_timer.png",
+      "/assets/pomodoro_page_calender.png",
+      "/assets/pomodoro_page_mypage.png"
+    ],
     "githubUrl": "https://github.com/LeeYongSeok13/pomodoro-main/tree/main",
-    "pageUrl": "",
+    "pageUrl": "http://13.124.212.22:8000/",
     "useSkills": [
       { "name": "HTML", "percentage": 55.4 },
-      { "name": "EJS", "percentage": 55.4 },
+      { "name": "EJS", "percentage": 22.9 },
       { "name": "CSS", "percentage": 21.7 }
+    ],
+    "contributions": [
+      "#프로젝트 팀원",
+      "#로그인 & 회원가입 페이지 디자인 & 화면 구현",
+      "#로그인 & 회원가입 DB 저장",
+      "#비밀번호 암호화 및 재설정 기능 구현"
     ]
   },
   {
     "id": 8,
     "type": "team",
     "title": "League of Legend Custom Team Matching",
-    "description": "서버와 클라이언트 방식을 사용한 React 프로젝트 입니다.",
+    "description": "서버와 클라이언트 방식을 사용한 React 프로젝트",
     "image": "/assets/noobs_logo.png",
     "pageImage": ["/assets/noobs_app_login.png", "/assets/noobs_app_main.png"],
     "githubUrl": "https://github.com/LeeYongSeok13/matchSystem",
@@ -129,6 +171,12 @@
       { "name": "Javascript", "percentage": 33.5 },
       { "name": "CSS", "percentage": 1.4 },
       { "name": "Other", "percentage": 0.6 }
+    ],
+    "contributions": [
+      "#프로젝트 팀장",
+      "#로그인 페이지 디자인 & 화면 구현",
+      "#메인페이지 디자인 & 화면 및 기능구현",
+      "#API 요청 후 저장된 DB를 프론트 단위에서 렌더링"
     ]
   }
 ]

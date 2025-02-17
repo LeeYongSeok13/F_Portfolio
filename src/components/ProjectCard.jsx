@@ -86,7 +86,10 @@ export default function ProjectCard({ project, onButtonClick }) {
   return (
     <CardWrapper>
       <ImageContainer>
-        <ProjectImage src={project.image} alt={project.title} />
+        <ProjectImage
+          src={process.env.PUBLIC_URL + project.image}
+          alt={project.title}
+        />
       </ImageContainer>
       <ProjectDetails>
         <ProjectTitle>{project.title}</ProjectTitle>

@@ -17,7 +17,8 @@ const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url("/assets/background.jpg") no-repeat center center fixed;
+  background: url(${process.env.PUBLIC_URL}/assets/background.jpg) no-repeat
+    center center fixed;
   background-size: cover;
   height: 100vh;
   justify-content: center;

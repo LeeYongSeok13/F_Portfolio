@@ -28,7 +28,7 @@ const ModalContent = styled.div`
 
 const Title = styled.h2`
   font-family: "Caveat Brush", cursive;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: ${({ type }) =>
     type === "personal" ? "#3b5998" : "#2c6b2f"}; /* 색상 적용 */
 `;
@@ -98,6 +98,10 @@ const ContentWrapper = styled.div`
   }
 `;
 
+const Description = styled.p`
+  text-align: center;
+`;
+
 const SkillsWrapper = styled.div`
   margin-bottom: 5px;
 `;
@@ -128,6 +132,17 @@ const ProgressBar = styled.div`
 const Contributions = styled.span`
   font-size: 0.8rem;
 `;
+
+const RoleParagraph = styled.p`
+  text-align: center;
+  margin-bottom: 10px;
+`;
+
+const ContributionText = styled.p`
+  margin: 0;
+  line-height: 1.5;
+`;
+
 const CloseButton = styled.div`
   position: absolute;
   top: 10px;
@@ -199,10 +214,10 @@ export default function ProjectModal({ project, onClose, type }) {
     <ModalWrapper className="modal-wrapper" onClick={handleBackgroundClick}>
       <ModalContent>
         <CloseButton onClick={onClose}>&times;</CloseButton>
-        <Title type={type}>{project.title}</Title> {/* ⬅ 변경된 h2 */}
+        <Title type={type}>{project.title}</Title>
         <ImageContainer type={type}>
           <img
-            src={images[currentImageIndex]}
+            src={process.env.PUBLIC_URL + images[currentImageIndex]}
             alt={`${project.title} - ${currentImageIndex + 1}`}
           />
         </ImageContainer>
@@ -219,7 +234,7 @@ export default function ProjectModal({ project, onClose, type }) {
           </DotContainer>
         )}
         <ContentWrapper type={type}>
-          <p>{project.description}</p>
+          <Description>{project.description}</Description>
           {Array.isArray(project.useSkills) && project.useSkills.length > 0 && (
             <SkillsWrapper>
               {project.useSkills.map((skill, idx) => (
@@ -238,7 +253,28 @@ export default function ProjectModal({ project, onClose, type }) {
                   </ProgressBar>
                 </div>
               ))}
-              <Contributions>{project.contributions}</Contributions>
+              <Contributions>
+                {type === "team" && (
+                  <RoleParagraph>
+                    프로젝트 담당 역할 <br />
+                    <br />
+                    {project.contributions.map((contribution, index) => (
+                      <ContributionText key={index}>
+                        {contribution}
+                      </ContributionText>
+                    ))}
+                  </RoleParagraph>
+                )}
+                {type !== "team" && (
+                  <RoleParagraph>
+                    {project.contributions.map((contribution, index) => (
+                      <ContributionText key={index}>
+                        {contribution}
+                      </ContributionText>
+                    ))}
+                  </RoleParagraph>
+                )}
+              </Contributions>
             </SkillsWrapper>
           )}
         </ContentWrapper>

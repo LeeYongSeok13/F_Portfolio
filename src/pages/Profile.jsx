@@ -19,7 +19,7 @@ export default function Profile() {
     birth: "1994년 7월 17일",
     phone: "010-4124-5417",
     email: "dydtm3@naver.com",
-    image: "./assets/ProfileImage.jpg",
+    image: process.env.PUBLIC_URL + "/assets/ProfileImage.jpg",
     github: "https://github.com/LeeYongSeok13",
     velog: "https://velog.io/@korda28",
     career: [
