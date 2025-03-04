@@ -52,7 +52,7 @@ const Description = styled.h3`
 
 export default function MainPageInfo() {
   const info = {
-    title: "Junior Web Publisher / FrontEnd Developer Portfolio",
+    title: "Junior FrontEnd Developer Portfolio",
     description: "꿈을 만들어가는 개발자 입니다",
   };
 
