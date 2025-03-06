@@ -31,7 +31,7 @@ export default function Profile() {
       },
       {
         year: "2024~2025",
-        description: "코딩온 웹 개발자 입문과정 진행중",
+        description: "코딩온 웹 개발자 입문과정 수료",
       },
     ],
     skills: [
